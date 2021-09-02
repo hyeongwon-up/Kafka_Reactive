@@ -19,21 +19,24 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.projectreactor:reactor-test'
     implementation 'org.springframework.boot:spring-boot-starter-hateoas'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'org.springframework.kafka:spring-kafka'
-    implementation 'org.projectlombok:lombok:1.18.18'
     implementation 'junit:junit:4.13.1'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    annotationProcessor("org.projectlombok:lombok")
-    compileOnly('org.projectlombok:lombok')
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb-reactive'
     implementation group: 'org.mongodb', name: 'mongodb-driver-sync'
-    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
     testImplementation 'org.springframework.kafka:spring-kafka-test'
+    implementation group: 'io.springfox', name: 'springfox-swagger2', version:  '2.9.2'
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version:  '2.9.2'
 }
 
 test {

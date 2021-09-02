@@ -4,9 +4,10 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Id;
+
 import java.io.Serializable;
 
 @Getter
@@ -14,6 +15,7 @@ import java.io.Serializable;
 @RequiredArgsConstructor
 @EqualsAndHashCode @Document(collection = "attempts")
 public class Attempt implements Serializable {
+
     @Id
     private long id;
     private final User user;
