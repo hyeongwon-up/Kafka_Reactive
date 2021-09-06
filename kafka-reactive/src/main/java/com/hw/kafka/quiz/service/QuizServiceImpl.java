@@ -13,11 +13,13 @@ import reactor.core.publisher.Mono;
 
 import java.util.Optional;
 
-@Service @RequiredArgsConstructor
+@Service
+@RequiredArgsConstructor
 public class QuizServiceImpl implements QuizService{
-    private final GeneratorService generatorService;
     private final UserRepository userRepository;
+    private final GeneratorService generatorService;
     private final AttemptRepository attemptRepository;
+
 
     @Override
     public Mono<Quiz> createQuiz() {

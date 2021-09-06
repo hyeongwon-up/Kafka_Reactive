@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.hw'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '11'
 
 configurations {
     compileOnly {
@@ -19,21 +19,13 @@ repositories {
 }
 
 dependencies {
-
-
-    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
-    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'io.projectreactor:reactor-test'
-    implementation 'org.springframework.kafka:spring-kafka'
-    implementation 'junit:junit:4.13.1'
-
-    testImplementation 'org.springframework.kafka:spring-kafka-test'
-    implementation group: 'io.springfox', name: 'springfox-swagger2', version:  '2.9.2'
-    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version:  '2.9.2'
 }
 
 test {
